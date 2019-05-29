@@ -1,0 +1,47 @@
+class StaticTest 
+{
+	StaticTest()
+	{
+		System.out.println("Constructor of the class");
+	}
+	{
+		System.out.println("Non Static Block");
+	}
+	int x = m2();
+	int y = m1();
+	static int z = m3();
+	int m1()
+	{
+		System.out.println("Non Static Function m1()");
+		return 20;
+	}
+	static
+	{
+		System.out.println("Static Block");
+	}
+	int m2()
+	{
+		System.out.println("Non Static Function m2()");
+		return 10;
+	}
+	static int m3()
+	{
+		System.out.println("Static Function m3()");
+		return 30;
+	}
+	public static void main(String[] args) 
+	{
+		StaticTest st = new StaticTest();
+		System.out.println("Inside Main Function");
+		System.out.println("x: " + st.x);
+		System.out.println("y: " + st.y);
+		System.out.println("z: " + z);
+		{
+			System.out.println("Non Static Block inside main");
+		}
+		static
+		{
+			System.out.println("Static Block inside main");
+		}
+	}
+}

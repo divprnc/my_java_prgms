@@ -1,0 +1,13 @@
+// String is immutable. Immutable means every string object is independent. Each time we modify a string it creates a new memory     space in memory.
+class StringTest 
+{
+	/*public String toString()
+	{
+		return hashCode();
+	}*/
+	public static void main(String[] args) 
+	{
+		StringTest st = new StringTest();
+		System.out.println(st);
+	}
+}

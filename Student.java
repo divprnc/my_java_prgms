@@ -1,0 +1,35 @@
+class Address
+{}
+class Student
+{
+	int roll;
+	String name;
+	Student(int roll, String name)
+	{
+		this.roll = roll;
+		this.name = name;
+	}
+	
+	/* overriding equals method
+	public boolean equals(Object obj)
+	{
+		if (this == obj)
+			return true;
+		else
+		{
+			if (obj instanceof Student)
+			{
+				Student s = (Student)obj;
+				return this.roll == s.roll && this.name == s.name;
+			}
+			else
+				return false;
+		}
+	}
+
+	// overriding hashcode() method
+	public int hashCode()
+	{
+		return (roll + name.length());
+	} */
+}

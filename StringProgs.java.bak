@@ -1,0 +1,13 @@
+import java.util.Scanner;
+class StringProgs 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scn = new Scanner(System.in);
+		System.out.print("Enter first name:");
+		String s1 = scn.nextLine();
+		System.out.print("Enter last name:");
+		String s2 = scn.nextLine();
+		System.out.println("Hi  " + s1 + " " + s2);
+	}
+}

@@ -1,0 +1,20 @@
+class StringLiteralOperationTest 
+{
+	public static void main(String[] args) 
+	{
+		String s1 = "ab";
+		String s2 = "bb";
+		String s3 = s1 + s2;
+		String s4 = "ab" + "x" + "y";
+		String s5 = s1 + "x" + "y";
+		String s6 = "x";
+		String s7 = "abxy";
+		System.out.println("s1: " + s1.identityHashCode());
+		System.out.println("s2: " + s2.identityHashCode());
+		System.out.println("s3: " + s3.identityHashCode());
+		System.out.println("s4: " + s4.identityHashCode());
+		System.out.println("s5: " + s5.identityHashCode());
+		System.out.println("s6: " + s6.identityHashCode());
+		System.out.println("s7: " + s7.identityHashCode());
+	}
+}
