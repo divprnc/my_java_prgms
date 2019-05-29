@@ -1,0 +1,85 @@
+The File Class
+============
+An absolute file name contains a file name with its complete path and drive letter.
+For example,
+	C:\book\Welcome.java
+
+The File class contains the methods for obtaining file properties and for renaming and deleting files. The File class does not contains the methods for reading and writing file contents.
+
+java.io.File class methods:
+1.   File (String pathName) 
+2.   File (String parent, String child)
+3.   File (File parent, String child)
+4.   exists() : boolean 
+5.   canRead() : boolean
+6.   canWrite() : boolean
+7.   isDirectory() : boolean
+8.   isFile() : boolean
+9.   isAbsolute() : boolean
+10. isHidden() : boolean
+11. getAbsolutePath() : String
+12. getCanonicalPath() : String
+13. getName() : String
+14. getPath() : String
+15. getParent() : String
+16. lastModified() : long
+17. length() : long
+18. listFile() : File[]
+19. delete() : boolean
+20. renameTo() : boolean
+
+Note: Constructing a File instance does not create a file on the machine.
+import java.io.*;
+class TestFileClass 
+{
+	public static void main(String[] args) throws FileNotFoundException 
+	{
+		File file = new File("scores.txt");
+		System.out.println(file.exists()); 
+	}
+}
+Output: false
+
+Do not use absolute file name in the program. It will not work on platforms other than Windows.
+
+// A Sample File class program
+import java.io.File;
+import java.io.PrintWriter;
+class TestFileClass 
+{
+	public static void main(String[] args) throws FileNotFoundException 
+	{
+		File file = new File("scores.txt");
+		PrintWriter output = new PrintWriter(file);
+		System.out.println(file.exists());
+		output.printf("Ashu Akash Singh");
+		output.println(90);
+		output.close();
+	}
+}
+Output: true
+Invoking the constructor PrintWriter will create a file, whether the file is already exists or not. It will throw an exception.
+printf(), print() and println() methods is used to write text on files.
+close() method must be used to close the file. If not used, the data may not be properly save to the file.   
+
+// A sample program to read data from file
+import java.util.Scanner;
+import java.io.File;
+class ScannerDemo 
+{
+	public static void main(String[] args) throws Exception 
+	{
+		File file = new File("scores.txt");
+		Scanner scn = new Scanner(file);
+		while (scn.hasNext())
+		{
+			String fname = scn.next();
+			String mname = scn.next();
+			String lname = scn.next();
+			System.out.println(fname + " " + mname + " " + lname);
+		}
+		scn.close();
+	}
+}
+Output: Ashu Akash Singh90
+Scanner class is used to read data from the file.

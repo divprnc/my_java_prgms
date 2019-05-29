@@ -1,0 +1,51 @@
+import java.awt.*;
+import java.applet.*;
+/* 
+<applet code = "BannerApplet" height = 100 width = 100>
+</applet>
+*/
+public class BannerApplet extends Applet implements Runnable
+{
+	String msg = "Wishing You A Happy Journey ";
+	Thread t;
+	int state;
+	boolean stopFlag;
+	public void init()
+	{
+		setBackground(Color.gray);
+		setForeground(Color.green);
+		setFont(new Font("Times New Roman", Font.BOLD, 20));
+	}
+	public void start()
+	{
+		t = new Thread(this);
+		t.start();
+	}
+	public void run()
+	{
+		for (; ; )
+		{
+			try
+			{
+				repaint();
+				Thread.sleep(120);
+				char ch = msg.charAt(0);
+				msg = msg.substring(1, msg.length());
+				msg += ch;
+				if (stopFlag)
+					break;
+			}
+			catch (InterruptedException ie)
+			{}
+		}
+	}
+	public void stop()
+	{
+		stopFlag = true;
+		t = null;
+	}
+	public void paint(Graphics g)
+	{
+		g.drawString(msg, 100, 50);
+	}
+}

@@ -1,0 +1,3 @@
+Class	EventFire		MethodCall	  MethodExecute	     Interface
+-------	------------		--------------	  ---------------------	-------------------
+Button	ActionEvent	addActionListener	 actionPerformed	ActionListener

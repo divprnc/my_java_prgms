@@ -1,0 +1,25 @@
+import java.io.*;
+class FileCopy 
+{
+	public static void main(String[] args) 
+	{
+		try
+		{
+			FileInputStream fin = new FileInputStream("C:/Users/ASHU SINGH/Desktop/File Class.txt");
+			FileOutputStream fout = new FileOutputStream("File Class.txt");
+			int i;
+			while ( ( i = fin.read() ) != -1 )
+			{
+				fout.write(i);
+			}			
+		}
+		catch (FileNotFoundException | IOException e)
+		{
+			e.printStackTrace();
+		}
+		/*catch (IOException ioe)
+		{
+			ioe.printStackTrace();
+		}*/
+	}
+}
