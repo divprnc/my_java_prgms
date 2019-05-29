@@ -1,0 +1,23 @@
+Execution Flow of Thread
+A thread execution gets start when we call start() method. But during execution, it passes to several states. 
+There are five states of a thread:
+	i.   New
+	ii.  Ready to run (or) runnable
+	iii. Running
+	iv. Blocked
+	v.  Dead
+
+A newly born or when a thread is created, it comes in new state. When we call the thread by start(), then it passes to Ready to run or Runnable state.
+
+In Runnable state, JVM controls the execution of the thread, based on thread algorithms. 
+There are two types of thread algorithms.
+	i. Thread Scheduling
+	ii. Thread Priority
+Executing multiple threads within a single process is called scheduling. Each thread is executed based on time slice. This process is called thread scheduling. Thread scheduler will decide how long the current thread will execute. JVM schedules the execution of the thread base on thread priority. Thread scheduler allow the thread rto execute first, which have highest priority. A thread is in execution is allowed to execute for a fixed length of time, then it will be suspended. The java.lang.Thread.yield() method causes the current thread to suspend and allow to execute the other thread.
+Every thread is assigned with a priority. This priority defined the execution order of a thread in Ready state. Higher priority thread gets preference. The priority of thread ranges between 1 to 10. Default priority is 5.
+
+In running state, the thread execution is in progress.
+
+When the programmer paused the thread then it goes to Blocked state. A thread is goes to blocked state either by invoking sleep(), join(), suspend(), wait() or ioread(). When a thread is blocked, then it waits for the time slice and again it comes to runnable state and continues its execution.
+
+When a thread completes its execution, then it comes to dead state. Once the thread is in dead state, it cannot be resumed.

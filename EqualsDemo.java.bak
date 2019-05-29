@@ -1,0 +1,19 @@
+class EqualsDemo
+{
+	int x;
+	EqualsDemo(int x)
+	{
+		this.x = x;
+	}
+	public boolean equals(Object obj)
+	{
+		EqualsDemo ed = (EqualsDemo)obj;
+		return this.x == ed.x;
+	}
+	public static void main(String[] args)
+	{
+		EqualsDemo ed1 = new EqualsDemo(101);
+		EqualsDemo ed2 = new EqualsDemo(101);
+		System.out.println(ed1.equals(ed2));
+	}
+}

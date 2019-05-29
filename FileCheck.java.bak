@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class FileCheck 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scn = new Scanner(System.in);
+		System.out.println("Enter file name:");
+		String filename = scn.nextLine();
+		if (filename.contains(".")
+		{
+			if (filename.contains(".txt")
+				System.out.println("Text file");
+			else
+				System.out.println("Not a text file");
+		}
+		else
+			System.out.println("Not a valid file name");
+	}
+}

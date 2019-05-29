@@ -1,0 +1,9 @@
+class EqualsIgnoreDemo 
+{
+	public static void main(String[] args) 
+	{
+		String s1 = "Hello";
+		String s2 = "HELLO";
+		System.out.println(s1.regionMatches(1 , s2 , 1 , 4)); // true
+	}
+}
