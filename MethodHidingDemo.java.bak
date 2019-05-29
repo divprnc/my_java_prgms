@@ -1,0 +1,49 @@
+class A
+{
+	static void m1()
+	{
+		System.out.println("Static Method m1() of A");
+	}
+	void m2()
+	{
+		System.out.println("Non Static Method m2() of A");
+	}
+	void m3()
+	{
+		System.out.println("Non Static Method m3() of A");
+	}
+}
+class B extends A
+{
+	static void m1()
+	{
+		System.out.println("Static Method m1() of B");
+	}
+	void m2(int a)
+	{
+		System.out.println("Non Static Method m2() of B");
+	}
+	void m3()
+	{
+		super.m3();
+		System.out.println("No - arg Non Static Method m3() of B");
+	}
+}
+class MethodHidingDemo 
+{
+	public static void main(String[] args) 
+	{
+		B b = new B();
+		b.m1();
+		b.m2();
+		b.m2(10);
+		b.m3();
+		b.m3();
+		System.out.println();
+		A a = b;
+		a.m1();
+		a.m2();
+		// a.m2(10);
+		a.m3();
+	}
+}

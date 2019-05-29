@@ -1,0 +1,6 @@
+interface Item
+{
+	String name;
+	String size;
+	float price;
+}

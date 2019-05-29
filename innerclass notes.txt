@@ -1,0 +1,111 @@
+the class defined inside another class or interface is called inner class. we can also define an interface inside a class or interface.
+there are four types of inner class
+i. nested class (static inner class)
+ii. inner class (non - static inner class)
+iii. method local class (local inner class)
+iv. anonymous class (argument inner class)
+
+class Example
+{
+	static class A
+	{}
+	class B
+	{}
+	void m1()
+	{
+	class C
+	{}
+	void m2()
+	{
+	class C
+	}
+	}
+	m2(new Thread(){});
+}
+on compilation 
+i. Example.class
+ii. Example$A.class
+iii. Example$B.class
+iv. Example$1C.class
+v. Example$2C.class
+vi. Example$1.class
+
+class Example
+{
+	static class A
+	{}
+	class B
+	{}
+	void m1()
+	{
+	    class C
+	    {}
+	    new Thread()
+	    {}
+	    class D
+	    {}
+	}
+	void m2()
+	{
+	    class C
+	    {}
+	    class E
+	    {}
+	    new Thread()
+	    {}
+	}
+}
+
+Example.class
+Example$A.class
+Example$B.class
+Example$1C.class
+Example$1.class
+Example$1D.class
+Example$2C.class
+Example$1E.class
+Example$2.class
+
+STATIC INNER CLASS
+the inner class defined at class level is called static inner class.
+syntax
+class Example
+{
+	static class A
+	{}
+}
+
+allowed modifiers
+public, private, protected, final, abstract, strictfp
+
+types of modifiers allowed
+i. static variable
+ii. static block
+iii. static method
+iv. non - static variable
+v. non - static block
+vi. non - static method
+vii. main method
+viii. constructor
+
+accessing outside class members from inner class
+we can access outer class all static members from static inner class including private members, directly by their name. But we cannot access outer class non - static members directly by their name, we must access them only by creating outer class object.
+
+We cannot access outer class members using inner class reference variable.
+
+Accessing inner class members from outer class
+i. Static members by using inner class name
+ii. Non - Static members by using its(inner class) object
+
+Accessing inner class members from outside of outer class
+The syntax to access static inner class from outside of the outer class
+	outerclassname.innerclassname
+Rule: Like outer class private members, inner class private members are also cannot be accessed from outside of the outer class.
+
+By executing outer class inner class members is not get executed automatically. We must execute inner class separately as:
+java outer_class_name$inner_class_name
+
+When we load outer class, inner class is not loaded.
+When we load inner class, outer class is not loaded.
+
+If we access outer class members from inner class, or inner class members from outer class, then both the classes get loaded into JVM.

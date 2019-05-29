@@ -1,0 +1,14 @@
+1.   Write a PL / SQL program to retrieve maximum salary from emp table and also display that salary.
+2.   Which function is not allowed to use in PL / SQL blocks.
+3.   What is variable attributes? How many types of variable attributes are there?
+4.   In which case it is compulsory to assign the variable at the time of declaration?
+5.   What are data-types and variable suuportable in PL / SQL?
+6.   When oracle server returns error no data found? What is the error number?
+7.   Whenever PL / SQL statements having DML statements and if requested data is not available in the table, then what error it will	       return? What is the error number?
+8.   When select..into clause try to returns more number of values in single column, then what error it will return? What is the error   
+       number?
+9.   Which block is not allowed to call in client applications?
+10. What is bind variable? Bind variable is also known as ________
+11. Why variable eclaration is not required in for loop?
+12. Explain cursor?
+13. 

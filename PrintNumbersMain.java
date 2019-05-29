@@ -1,0 +1,14 @@
+class PrintNumbersMain 
+{
+	public static void main(String[] args) 
+	{
+		PrintNumbers pn1 = new PrintNumbers();
+		long time1 = System.currentTimeMillis();
+		pn1.print1to50();
+		System.out.println();
+		pn1.print50to1();
+		System.out.println();
+		long time2 = System.currentTimeMillis();
+		System.out.println("Time taken to complete both tasks:" + ((time2 - time1)/1000) + "seconds");
+	}
+}

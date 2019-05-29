@@ -1,0 +1,31 @@
+Executing multiple task at a same time is called multitasking.
+Multitasking is of two types:
+	i. Process based multitasking
+	ii. Thread based multitasking
+
+Process Based Multi - tasking 
+Executing multiple task simultaneously is called process based multitasking. It is a multi - tasking in which each process executes independently of each other. Each process have its own saperate address. This multi - tasking is developed at OS level.
+
+Thread Based Multi - tasking
+Executing multiple task concurrently is called thread based mutitasking. In this multi - tasking each process is a saperate independent part of a single process. This part is called thread. This multi - tasking is developed at programmatic level.
+
+Advantages of multi - tasking
+The main advantage of multi - tasking, either it is process based or thread based is to improve the performance of the system by decreasing the performance time.
+
+Note: In general process based multi - tasking is simply called multi - tasking and thread based multi - tasking is called multi - threading.
+
+Difference between multi - tasking and multi - threading
+Multi - tasking is a heavy weight process because switching context is slow because each process is stored at saperate address.
+Multi - threading is a light weight process because switching context is fast because each process is stored at same address.
+
+Java is a multi - threaded langauge.
+When JVM is created in its Java Stack Area (JSA), by default two threads are created:
+	i. main - to execute Java methods
+	ii. garbage collector - to destroy un - referenced objects.
+
+Sequential Execution vs Concurrent Execution
+Sequential execution means single thread execution. It takes more time to complete all method execution.
+Concurrent execution means multi - thread execution. It takes less time to complete all method execution.
+
+Meaning of Concurrent Execution
+Executing multiple tasks in "start - suspend - resume - end" fashion is called concurrent execution. Both tasks will start at different point of time, one task is paused while other task is in execution.
