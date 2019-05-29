@@ -1,0 +1,43 @@
+import java.util.*;
+class Username 
+{
+	public static void main(String[] args) 
+	{
+		while(true)
+		{
+			System.out.print("Enter Username: ");
+			Scanner scn = new Scanner(System.in);
+			String s = scn.nextLine();
+			if(s.isEmpty())
+				System.out.println("Username cannot be empty");
+			else
+			{
+				System.out.println("Username is valid");
+				break;		
+			}
+		}
+		while(true)
+		{
+			System.out.print("Enter password: ");
+			Scanner scn = new Scanner(System.in);
+			String s = scn.nextLine();
+			//for(int i=0;i<s.length();i++)
+			//{
+				//char ch = s.charAt(i);
+				if(s.isEmpty())
+					System.out.println("Password cannot be empty");
+				//else if(Character.isUpperCase((char)Integer.parseInt(s)))
+				//	System.out.println("Password must contain atleast 1 uppercase character");
+				//else if(!Character.isDigit())
+					//System.out.println("Password must contain atleast a number");
+				else if(!s.contains("[@#$%^*]"))
+					System.out.println("Password must contain atleast 1 special character");
+				else
+				{
+					System.out.println("Password is valid");
+					break;
+				}
+			//}
+		}
+	}
+}

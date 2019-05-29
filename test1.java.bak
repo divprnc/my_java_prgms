@@ -1,0 +1,23 @@
+import java.util.Scanner;
+class test1 
+{
+	public static void main(String[] args) 
+	{
+		Scanner scn = new Scanner(System.in);
+		System.out.print("Enter Passwod: ");
+		String password = scn.nextLine();
+		char ch = password.charAt(0);
+		if (!(Character.isLowerCase(ch)))
+		{
+			for (int i=1; i < password.length(); i++)
+			{
+			   ch = password.charAt(i);
+					if (!Character.isLowerCase(ch))
+				   {  
+						System.out.println("Invalid password - Must have a Lower Case character.");
+						password = "";
+				   }// end if
+			} //end for
+		}// end if
+	}
+}
