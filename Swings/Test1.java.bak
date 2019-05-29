@@ -1,0 +1,14 @@
+import javax.swing.*;
+import java.awt.*;
+class Test1 
+{
+	public Test1()
+	{
+		JFrame frame = new JFrame();
+		frame.setVisible(true);
+	}
+	public static void main(String[] args) 
+	{
+		new Test1();
+	}
+}

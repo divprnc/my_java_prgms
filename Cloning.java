@@ -1,0 +1,18 @@
+class A
+{
+	int x = 10;
+	int y = 20;
+}
+class Cloning implements Cloneable
+{
+	String m1()
+	{
+		System.out.println("hello");
+	}
+	public static void main(String args[]) throws CloneNotSupportedException
+	{
+		Cloning c1 = new Cloning();
+		Cloning c2 = (Cloning)c1.clone();
+		System.out.println(c1.m1() == c2.m1());
+	}
+}
